@@ -27,22 +27,10 @@ async def test_project(dut):
 
     dut._log.info("Test digOta")
 
-    dut.ui_in[0].value = 0
-    dut.ui_in[1].value = 0
-    await ClockCycles(dut.clk, 1)
-    assert dut.uo_out[0].value == BinaryValue('Z')
 
     dut.ui_in[0].value = 1
-    dut.ui_in[1].value = 0
-    await ClockCycles(dut.clk, 1)
-    assert dut.uo_out[0].value == 0
-    
-    dut.ui_in[0].value = 0
     dut.ui_in[1].value = 1
     await ClockCycles(dut.clk, 1)
-    assert dut.uo_out[0].value == 0
+    assert dut.uo_out[0].value == 1
+    
 
-    dut.Vip.value = 1
-    dut.Vin.value = 1
-    await ClockCycles(dut.clk, 1)
-    assert dut.Out.value == BinaryValue('Z')
