@@ -18,12 +18,13 @@ project:
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
     - "project.v"
+    - "digOta.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
+  ui[0]: "Vip"
+  ui[1]: "Vin"
   ui[2]: ""
   ui[3]: ""
   ui[4]: ""
@@ -32,7 +33,7 @@ pinout:
   ui[7]: ""
 
   # Outputs
-  uo[0]: ""
+  uo[0]: "Out"
   uo[1]: ""
   uo[2]: ""
   uo[3]: ""
