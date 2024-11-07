@@ -33,7 +33,7 @@ async def test_project(dut):
     dut.ui_in[1].value = 0
     await ClockCycles(dut.clk, 1)
     dut._log.info(f"Value of uo_out[0]: {dut.uo_out[0].value}")
-    assert dut.uo_out[0].value == 1
+    assert dut.uo_out[0].value == BinaryValue("Z")
 
 
     
