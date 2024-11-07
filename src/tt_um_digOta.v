@@ -20,7 +20,6 @@ module tt_um_digOta (
     assign uio_out[7:0] = 0; 
     assign uio_oe[7:0] = 8'b0;   
     assign uo_out[7:1] = 0; 
-    assign ui_in[7:2] = 0; 
 
   // List all unused inputs to prevent warnings
     wire _unused = &{ena, clk, rst_n,ui_in[7:2],uio_in[7:0],1'b0};
