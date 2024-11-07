@@ -9,12 +9,14 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+This desing implements a digital Operational Transconductance Amplifier using standard digital logic gates instead of using traditional analog components. 
 
 ## How to test
 
-Explain how to use your project
+- Vip and Vin =   represent the two input signals to the digital OTA.
+
+The OTA takes the difference between Vin and Vip, and generates a corresponding output depending on the chosen configuration.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Signal generator to generate the Vin and Vip and a oscilloscope to see the Output. Passive component to test diferent configurations. 
