@@ -28,7 +28,7 @@ async def test_project(dut):
     dut.Vip.value = 0
     dut.Vin.value = 0
     await ClockCycles(dut.clk, 1)
-    assert dut.Out.value == 1'bZ
+    assert dut.Out.value == Logic("Z")
 
     dut.Vip.value = 1
     dut.Vin.value = 0
@@ -43,5 +43,5 @@ async def test_project(dut):
     dut.Vip.value = 1
     dut.Vin.value = 1
     await ClockCycles(dut.clk, 1)
-    assert dut.Out.value == 1'bZ
+    assert dut.Out.value == Logic("Z")
 
