@@ -25,20 +25,20 @@ async def test_project(dut):
 
     dut._log.info("Test digOta")
 
-    dut.Vip.value = 0
-    dut.Vin.value = 0
+    dut.ui_in[0].value = 0
+    dut.ui_in[1].value = 0
     await ClockCycles(dut.clk, 1)
-    assert dut.Out.value == Logic("Z")
+    assert dut.uo_out[0].value == Logic("Z")
 
-    dut.Vip.value = 1
-    dut.Vin.value = 0
+    dut.ui_in[0].value = 1
+    dut.ui_in[1].value = 0
     await ClockCycles(dut.clk, 1)
-    assert dut.Out.value == 0
+    assert dut.uo_out[0].value == 0
     
-    dut.Vip.value = 0
-    dut.Vin.value = 1
+    dut.ui_in[0].value = 0
+    dut.ui_in[1].value = 1
     await ClockCycles(dut.clk, 1)
-    assert dut.Out.value == 0
+    assert dut.uo_out[0].value == 0
 
     dut.Vip.value = 1
     dut.Vin.value = 1
